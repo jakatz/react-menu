@@ -60,7 +60,7 @@ class App extends Component {
     const timestamp = Date.now();
     fishes[`fish-${timestamp}`] = fish;
     // set state
-    this.setState({ fishes: sampleFishes });
+    this.setState({ fishes });
   }
 
   updateFish(key, updatedFish) {
@@ -124,6 +124,10 @@ class App extends Component {
       </div>
     );
   }
+}
+
+App.proptTypes = {
+  params: React.PropTypes.object.isRequired
 }
 
 export default App;
